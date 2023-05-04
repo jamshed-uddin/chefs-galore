@@ -2,6 +2,7 @@ import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import SingleRecipe from "./SingleRecipe";
 
 const ChefRecipes = () => {
   const { chefId } = useParams();
@@ -35,9 +36,7 @@ const ChefRecipes = () => {
     setChefRecipes(recipes);
   }, [allRecipes]);
   return (
-    <div className="bg-[#FE3A4A] text-white px-16 lg:px-32 ">
-      <h1>hello recipes:{chefId}</h1>
-      <h1>all recipes:{ChefRecipes.length}</h1>
+    <div className="bg-[#FE3A4A] text-white px-16 py-16 lg:px-32 ">
       <div className="flex flex-col lg:flex-row gap-12 mx-auto">
         <div className="">
           <img
@@ -66,23 +65,7 @@ const ChefRecipes = () => {
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 py-8 ">
           {ChefRecipes.map((recipe) => (
-            <div key={recipe?.id} className="border-2 rounded-lg p-3">
-              <p className="text-2xl font-bold">{recipe?.recipe_name}</p>
-              <span className="block h-[2px] w-36 mt-2  bg-white"></span>
-              <div className="py-3 space-y-2  flex flex-col">
-                <p className="text-xl font-bold">Ingredients</p>
-                <ul className="text-lg font-light">
-                  {recipe?.ingredients?.map((ingredient, index) => (
-                    <li key={index}>- {ingredient}</li>
-                  ))}
-                </ul>
-                <p className="text-xl font-bold">Cooking method</p>
-                <p className="text-lg font-light">{recipe?.cooking_method}</p>
-                <p className="text-xl font-bold mt-auto">
-                  Ratings: {recipe?.rating}
-                </p>
-              </div>
-            </div>
+            <SingleRecipe key={recipe.id} recipe={recipe}></SingleRecipe>
           ))}
         </div>
       </div>
