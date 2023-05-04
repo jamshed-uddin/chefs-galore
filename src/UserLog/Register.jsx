@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Register = () => {
   const [error, setError] = useState("");
   const { registerUser } = useContext(AuthContext);
-
+  const navigate = useNavigate();
   const handleRegister = (event) => {
     event.preventDefault();
 
@@ -13,20 +13,16 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(email, password);
-
     setError("");
-    if (password !== confirm) {
-      setError("Your password did not match");
-      return;
-    } else if (password.length < 6) {
-      setError("password must be 6 characters or longer");
+    if (password.length < 6) {
+      setError("password must be atleast 6 characters.");
       return;
     }
     registerUser(email, password)
       .then((result) => {
         const registeredUser = result.user;
         console.log(registeredUser);
+        navigate("/profile");
       })
       .catch((error) => {
         console.log(error);
@@ -36,7 +32,7 @@ const Register = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-[90vh] bg-gray-100">
-      <h1 className="text-2xl font-bold py-4">Register</h1>
+      <h1 className="text-2xl font-bold pb-4">Register</h1>
       <div className="w-full max-w-md">
         <form
           onSubmit={handleRegister}
@@ -94,7 +90,7 @@ const Register = () => {
           </div>
           <div className="flex items-center justify-between">
             <input
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer"
               type="submit"
               value="Register"
             />
@@ -111,6 +107,7 @@ const Register = () => {
           </div>
         </form>
       </div>
+      <p className="text-sm text-red-500">{error}</p>
     </div>
   );
 };

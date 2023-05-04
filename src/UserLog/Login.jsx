@@ -1,10 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Login = () => {
-  const { login } = useContext(AuthContext);
-
+  const { login, handleGoogleLogin, handleGithubLogin } =
+    useContext(AuthContext);
+  const [error, setError] = useState("");
+  console.log(error);
   const handleLogin = (event) => {
     event.preventDefault();
 
@@ -12,7 +15,14 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
-
+    setError("");
+    if (error === "Firebase: Error (auth/user-not-found).") {
+      setError("User not found.Please Register.");
+      return;
+    } else if (error === "Firebase: Error (auth/wrong-password).") {
+      setError("Wrong password.");
+      return;
+    }
     login(email, password)
       .then((result) => {
         const loggedUser = result.user;
@@ -20,7 +30,11 @@ const Login = () => {
         form.reset();
       })
       .catch((error) => {
-        console.log(error);
+        if (error.message === "Firebase: Error (auth/user-not-found).") {
+          setError("User not found.Please Register.");
+        } else if (error.message === "Firebase: Error (auth/wrong-password).") {
+          setError("Wrong password.");
+        }
       });
   };
 
@@ -60,7 +74,7 @@ const Login = () => {
           </div>
           <div className="flex items-center justify-between">
             <input
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer"
               type="submit"
               value="Log In"
             />
@@ -76,6 +90,22 @@ const Login = () => {
             </p>
           </div>
         </form>
+      </div>
+      <p className="text-red-500 text-sm">{error}</p>
+
+      <div className="mt-4 space-x-2">
+        <button
+          onClick={handleGoogleLogin}
+          className="border-2 border-[#FE3A4A] text-black font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline "
+        >
+          Continue with Google
+        </button>
+        <button
+          onClick={handleGithubLogin}
+          className="border-2 border-[#FE3A4A] text-black font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline "
+        >
+          Continue with Github
+        </button>
       </div>
     </div>
   );

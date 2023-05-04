@@ -4,13 +4,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log("environment variable", import.meta.env.VITE_apiKey);
 const firebaseConfig = {
   apiKey: "AIzaSyAThXcRkUtc7vSJI2NbLfqHHT45gDCRn9o",
-  authDomain: "chefs-galore.firebaseapp.com",
-  projectId: "chefs-galore",
-  storageBucket: "chefs-galore.appspot.com",
-  messagingSenderId: "338449526535",
-  appId: "1:338449526535:web:bc540883df9ecd58811fa2",
+  authDomain: import.meta.VITE_authDomain,
+  projectId: import.meta.VITE_projectId,
+  storageBucket: import.meta.VITE_storageBucket,
+  messagingSenderId: import.meta.VITE_messagingSenderId,
+  appId: import.meta.VITE_appId,
 };
 
 // Initialize Firebase
