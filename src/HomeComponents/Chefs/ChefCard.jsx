@@ -10,7 +10,7 @@ const ChefCard = ({ chef }) => {
   const { id, name, picture_url, bio } = chef;
   return (
     <Link to={`../chef/${id}`}>
-      <div className=" relative rounded-xl transition duration-500  hover:-translate-y-1 cursor-pointer drop-shadow-xl w-64 mx-auto">
+      <div className=" relative rounded-xl transition duration-500  hover:-translate-y-1 cursor-pointer drop-shadow-xl  lg:w-64 mx-auto">
         <img className="object-cover rounded-xl" src={picture_url} alt="" />
 
         <div className="flex flex-col bg-black bg-opacity-80 text-white p-3 absolute inset-0 rounded-xl transition duration-500 opacity-0 hover:opacity-100">

@@ -20,7 +20,7 @@ const Header = () => {
 
       {/*  nav button  section starts*/}
       <div
-        className={` block lg:flex lg:w-[65%] justify-end items-center px-16 lg:px-0 py-28 lg:py-0  z-40 lg:bg-inherit  lg:static transition-all duration-700  ${
+        className={` block lg:flex lg:w-[65%] justify-end items-center px-32  lg:px-0 py-32 lg:py-0  z-40 lg:bg-inherit  lg:static transition-all duration-700  ${
           isOpen ? "absolute top-0 right-0" : "absolute top-0 -right-96"
         } bg-gray-500 text-white`}
       >
