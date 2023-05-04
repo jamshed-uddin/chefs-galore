@@ -1,9 +1,12 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
 const Register = () => {
   const [error, setError] = useState("");
+  const [showPass, setShowPass] = useState(false);
   const { registerUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const handleRegister = (event) => {
@@ -75,18 +78,37 @@ const Register = () => {
               required
             />
           </div>
-          <div className="mb-6">
+          <div className="mb-6 relative">
             <label className="block text-gray-700 text-sm font-bold mb-2">
               Password
             </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="password"
-              type="password"
+              type={`${!showPass ? "password" : "text"}`}
               name="password"
               placeholder="******************"
               required
             />
+            <div className="absolute right-3 bottom-[6px]">
+              {!showPass && (
+                <p
+                  onClick={() => setShowPass(true)}
+                  className="cursor-pointer text-lg text-gray-500"
+                >
+                  <FontAwesomeIcon icon={faEye} />
+                </p>
+              )}
+
+              {showPass && (
+                <p
+                  onClick={() => setShowPass(false)}
+                  className="cursor-pointer text-lg text-gray-500"
+                >
+                  <FontAwesomeIcon icon={faEyeSlash} />
+                </p>
+              )}
+            </div>
           </div>
           <div className="flex items-center justify-between">
             <input
