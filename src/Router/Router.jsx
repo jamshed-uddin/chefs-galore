@@ -6,11 +6,13 @@ import Blogs from "../Blogs";
 import Home from "../Home/Home";
 import Chefs from "../HomeComponents/Chefs/Chefs";
 import ChefRecipes from "../HomeComponents/Chefs/ChefRecipes";
+import ErrorPage from "../shared/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

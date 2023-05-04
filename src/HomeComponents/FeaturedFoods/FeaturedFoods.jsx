@@ -18,7 +18,12 @@ const FeaturedFoods = () => {
         {foods.map((food) => (
           <div className="border-2 border-white rounded-xl" key={food.id}>
             <div>
-              <img className="rounded-t-xl" src={food?.food_img_url} alt="" />
+              <img
+                className="rounded-t-xl"
+                src={food?.food_img_url}
+                alt={food?.food_name}
+                loading="lazy"
+              />
             </div>
             <div className="px-4 py-3">
               <h1 className="text-2xl font-semibold pb-2">{food?.food_name}</h1>

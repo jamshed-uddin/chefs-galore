@@ -42,7 +42,8 @@ const ChefRecipes = () => {
           <img
             className="lg:w-72 rounded-lg lg:mx-0 mx-auto"
             src={picture_url}
-            alt=""
+            alt={name}
+            loading="lazy"
           />
         </div>
         <div className="lg:py-10 lg:w-[60%] lg:mx-auto flex flex-col">
