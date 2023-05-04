@@ -9,6 +9,7 @@ import ChefRecipes from "../HomeComponents/Chefs/ChefRecipes";
 import ErrorPage from "../shared/ErrorPage";
 import Login from "../UserLog/Login";
 import Register from "../UserLog/Register";
+import UserProfile from "../UserLog/UserProfile";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <Register></Register>,
+      },
+      {
+        path: "profile",
+        element: <UserProfile></UserProfile>,
       },
     ],
   },

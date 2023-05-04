@@ -4,6 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
   const { login } = useContext(AuthContext);
+
   const handleLogin = (event) => {
     event.preventDefault();
 
@@ -22,6 +23,7 @@ const Login = () => {
         console.log(error);
       });
   };
+
   return (
     <div className="flex flex-col items-center justify-center h-[90vh] bg-gray-100">
       <h1 className="text-2xl font-bold py-4">Log in</h1>

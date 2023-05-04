@@ -1,12 +1,14 @@
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Header.css";
 
 import { Link, NavLink } from "react-router-dom";
 import { faCircleUser } from "@fortawesome/free-regular-svg-icons";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Header = () => {
+  const { user } = useContext(AuthContext);
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -54,7 +56,10 @@ const Header = () => {
         </div>
 
         <div className="mt-4 lg:mt-0  ml-3 lg:ml-10">
-          <Link to={"/login"} className="cursor-pointer">
+          <Link
+            to={`${user ? "/profile" : "/login"}`}
+            className="cursor-pointer"
+          >
             <FontAwesomeIcon className="text-4xl" icon={faCircleUser} />
           </Link>
         </div>
