@@ -1,16 +1,14 @@
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
-
-const notify = () => toast("Here is your toast.");
+import { toast } from "react-hot-toast";
 
 const SingleRecipe = ({ recipe }) => {
   const [liked, setLiked] = useState(false);
 
   const handleLiked = () => {
     setLiked(true);
-    notify();
+    toast("Recipe added to your favourites.");
   };
   return (
     <>

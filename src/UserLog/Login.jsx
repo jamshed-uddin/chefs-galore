@@ -9,7 +9,7 @@ const Login = () => {
     useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
+
   const from = location.state?.from?.pathname || "/";
   const handleLogin = (event) => {
     event.preventDefault();
@@ -17,7 +17,7 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+
     setError("");
     if (error === "Firebase: Error (auth/user-not-found).") {
       setError("User not found.Please Register.");

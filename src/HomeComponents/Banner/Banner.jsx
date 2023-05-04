@@ -1,5 +1,6 @@
 import React from "react";
 import "./Banner.css";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -11,9 +12,12 @@ const Banner = () => {
         <p className="text-lg text-gray-200 mb-8">
           Experience the best flavors from around the world.
         </p>
-        <button className="btn btn-wide bg-[#FE3A4A] hover:bg-red-500">
-          Get Started
-        </button>
+        <Link
+          to={"/chefs"}
+          className="btn btn-wide bg-[#FE3A4A] hover:bg-red-500"
+        >
+          Explore
+        </Link>
       </div>
     </div>
   );

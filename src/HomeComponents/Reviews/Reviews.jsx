@@ -21,7 +21,7 @@ const Reviews = () => {
   return (
     <div className="bg-[#FE3A4A] py-16 px-16 lg:px-32">
       <h1 className="text-white text-5xl font-bold text-center pb-10">
-        Words from our loving customer
+        Words from our loving customers
       </h1>
       {loading ? (
         <div className="flex justify-center items-center h-[60vh]">
