@@ -5,7 +5,7 @@ import "./Reviews.css";
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(false);
-  console.log(reviews);
+
   useEffect(() => {
     setLoading(true);
     fetch(

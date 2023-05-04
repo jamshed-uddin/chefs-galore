@@ -4,7 +4,6 @@ import ChefCard from "./ChefCard";
 const Chefs = () => {
   const [chefs, setChefs] = useState([]);
   const [loading, setLoading] = useState(false);
-  console.log(chefs);
 
   useEffect(() => {
     setLoading(true);

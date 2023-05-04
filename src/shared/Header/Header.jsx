@@ -55,7 +55,7 @@ const Header = () => {
           </NavLink>
         </div>
 
-        <div className="mt-4 lg:mt-0  ml-3 lg:ml-10">
+        <div className="mt-4 lg:mt-0  ml-3 lg:ml-10 " title={user?.email}>
           <Link
             to={`${user ? "/profile" : "/login"}`}
             className="cursor-pointer"

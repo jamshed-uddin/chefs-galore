@@ -20,9 +20,6 @@ const ChefRecipes = () => {
     years_of_experience,
   } = chefDetail;
 
-  console.log(chefDetail);
-  console.log(allRecipes);
-  console.log(ChefRecipes);
   useEffect(() => {
     setLoading(true);
     fetch(

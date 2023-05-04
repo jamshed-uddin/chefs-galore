@@ -16,7 +16,7 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  console.log(user);
+
   // google login
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
