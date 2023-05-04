@@ -1,9 +1,12 @@
 ﻿# b7a10-chef-recipe-hunter-client-side-jamshed-uddin
 
 
-## Features of the platform.
+## The best we provide.
 
-- Best jobs with clean detail.
-- Filter for remote or onsite jobs.
-- Wide range of categories.
+- Quality food.
+- Foods from best chefs of the area.
+- Deliver the best chef to serve any function.
 - And more.
+## Give it a visit to explore more features.
+
+## [Wire Hire](https://wirehires.netlify.app/) (Hosted on netlify)
