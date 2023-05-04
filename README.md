@@ -6,6 +6,7 @@
 - Quality food.
 - Foods from best chefs of the area.
 - Deliver the best chef to serve any function.
+- Best recipes from our chefs
 - And more.
 ## Give it a visit to explore more about us.
 
