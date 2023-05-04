@@ -10,7 +10,7 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div className="flex justify-between h-16 text-white  items-center px-6 lg:px-16 py-3 lg:py-0 shadow-lg fixed top-0 right-0 left-0 bg-[#313641] z-40">
+    <div className="flex justify-between h-16 text-white  items-center px-6 lg:px-16 py-3 lg:py-0 shadow-lg fixed top-0 right-0 left-0 bg-[#FE3A4A] z-40">
       <div>
         <Link to={"/"}>
           {" "}

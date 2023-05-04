@@ -11,7 +11,7 @@ const Banner = () => {
         <p className="text-lg text-gray-200 mb-8">
           Experience the best flavors from around the world.
         </p>
-        <button className="btn btn-wide btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+        <button className="btn btn-wide bg-[#FE3A4A] hover:bg-red-500">
           Get Started
         </button>
       </div>
