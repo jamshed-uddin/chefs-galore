@@ -1,6 +1,6 @@
 ﻿# b7a10-chef-recipe-hunter-client-side-jamshed-uddin
 
-
+## Chefs Galore.
 ## The best we provide.
 
 - Quality food.
@@ -9,4 +9,4 @@
 - And more.
 ## Give it a visit to explore more features.
 
-## [Wire Hire](https://wirehires.netlify.app/) (Hosted on netlify)
+## [Chefs Galore](https://chefs-galore.web.app/) (Hosted on firebase)
