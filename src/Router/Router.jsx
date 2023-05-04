@@ -7,6 +7,8 @@ import Home from "../Home/Home";
 import Chefs from "../HomeComponents/Chefs/Chefs";
 import ChefRecipes from "../HomeComponents/Chefs/ChefRecipes";
 import ErrorPage from "../shared/ErrorPage";
+import Login from "../UserLog/Login";
+import Register from "../UserLog/Register";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
       {
         path: "blogs",
         element: <Blogs></Blogs>,
+      },
+      {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "register",
+        element: <Register></Register>,
       },
     ],
   },
