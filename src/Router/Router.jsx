@@ -10,6 +10,7 @@ import ErrorPage from "../shared/ErrorPage";
 import Login from "../UserLog/Login";
 import Register from "../UserLog/Register";
 import UserProfile from "../UserLog/UserProfile";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
 
       {
         path: "chef/:chefId",
-        element: <ChefRecipes></ChefRecipes>,
+        element: (
+          <PrivateRoute>
+            <ChefRecipes></ChefRecipes>
+          </PrivateRoute>
+        ),
 
         loader: ({ params }) =>
           fetch(

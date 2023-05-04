@@ -26,9 +26,7 @@ const Blogs = () => {
           application helps catch bugs at run-time.PropTypes is React's internal
           mechanism for adding type checking to component props. React
           components use a special property called propTypes to set up type
-          checking: /** * FUNCTIONAL COMPONENTS */ function
-          ReactComponent(props) // ...implement render logic here
-          ReactComponent.
+          checking.
         </p>
         <h1 className="text-3xl font-semibold mt-7">
           Difference between Node js and Express js.

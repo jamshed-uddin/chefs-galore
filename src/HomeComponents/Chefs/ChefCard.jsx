@@ -31,7 +31,7 @@ const ChefCard = ({ chef }) => {
           </p>
         </div>
         <p
-          className={`hidden ${!showBtn ? "lg:hidden" : "lg:block"} 
+          className={` ${!showBtn ? "lg:hidden" : "lg:block"} 
           absolute bottom-4 left-2 bg-[#FE3A4A] px-2  mt-auto text-md text-white font-semibold py-2 rounded-xl transition-all duration-700`}
         >
           See Recipes{"   "} <FontAwesomeIcon icon={faArrowRightLong} />

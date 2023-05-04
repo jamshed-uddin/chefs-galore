@@ -36,7 +36,7 @@ const Footer = () => {
               Reviews
             </p>
           </div>
-          <div className="mx-auto lg:pl-0 pl-7 lg:pt-0 pt-5">
+          <div className="mx-auto lg:pl-0 pl-[70px] lg:pt-0 pt-5">
             <h1 className="text-xl font-bold">Contact Us</h1>
             <p>1234 Main Street, Anytown, USA 12345</p>
             <p>Phone: (555) 555-5555</p>
