@@ -35,7 +35,7 @@ const UserProfile = () => {
             {user ? (
               <button
                 onClick={handleLogout}
-                className="bg-blue-500 m-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded  cursor-pointer"
+                className="bg-[#FE3A4A] hover:bg-red-500 text-white font-bold py-2 px-4 rounded  cursor-pointer"
               >
                 Logout
               </button>
@@ -43,7 +43,7 @@ const UserProfile = () => {
               <button>
                 <Link
                   to={"/login"}
-                  className="bg-blue-500 m-2 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded  cursor-pointer"
+                  className="bg-[#FE3A4A] hover:bg-red-500 text-white font-bold py-2 px-4 rounded  cursor-pointer"
                 >
                   Login
                 </Link>

@@ -112,7 +112,7 @@ const Register = () => {
           </div>
           <div className="flex items-center justify-between">
             <input
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer"
+              className="bg-[#FE3A4A] hover:bg-red-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer"
               type="submit"
               value="Register"
             />
@@ -120,7 +120,7 @@ const Register = () => {
               <span className="text-sm">Already have an account?</span>
               <Link
                 to={"/login"}
-                className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+                className="inline-block align-baseline font-bold text-sm text-red-500 hover:text-red-400"
                 href="#"
               >
                 Login
